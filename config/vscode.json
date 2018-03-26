@@ -1,7 +1,78 @@
 {
+    // Theming
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "One Dark Pro",
+    "material-icon-theme.folders.color": "#90a4ae",
+
+    // Shell
+    "extensions.ignoreRecommendations": false,
+    "window.menuBarVisibility": "toggle",
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "off",
+
+    // Editor
     "window.zoomLevel": 1,
     "editor.renderWhitespace": "all",
-    "window.menuBarVisibility": "toggle",
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "vscode-icons"
+    "editor.fontSize": 16,
+    "editor.renderIndentGuides": false,
+    "terminal.integrated.fontSize": 15,
+    "editor.codeLens": false,
+    "diffEditor.renderSideBySide": false,
+
+    // Language configuration
+    "[javascript]": {
+        "editor.fontFamily": "Fira Code",
+        "editor.fontLigatures": true
+    },
+    "[javascriptreact]": {
+        "editor.fontFamily": "Fira Code",
+        "editor.fontLigatures": true
+    },
+    "files.associations": {
+        "*.cblproj": "xml",
+        "*.schedule": "ini"
+    },
+
+    "material-icon-theme.folders.associations": {
+        ".vs": "vscode",
+        "bin": "other",
+        "cpy": "include"
+    },
+    "vsicons.associations.folders": [
+        {
+            "icon": "include",
+            "extensions": ["cpy", "cpylib"],
+            "format": "svg"
+        }
+    ],
+    "vsicons.associations.files": [
+        {
+            "icon": "binary",
+            "extensions": [".int", ".gnt"],
+            "format": "svg"
+        },
+        {
+            "icon": "c2",
+            "extensions": [".cbl", ".cob", ".cpy"],
+            "format": "svg"
+        },
+        {
+            "icon": "plsql",
+            "extensions": [".idy"],
+            "format": "svg"
+        }
+    ],
+
+    // Extensions
+    "cSpell.language": "en-GB",
+    "cSpell.enabledLanguageIds": [
+        "latex",
+        "markdown",
+        "restructuredtext",
+        "text"
+    ],
+    "omnisharp.projectLoadTimeout": 300,
+    "git.enableSmartCommit": true,
+    "gitlens.keymap": "alternate",
+    "material-icon-theme.showUpdateMessage": false
 }
