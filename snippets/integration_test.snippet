@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>VSIDE Integration Test Fixture</Title>
+      <Author>Ted John</Author>
+      <Description>Says Hello to the world.</Description>
+      <Shortcut>integrationtest</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import><Namespace>System.IO</Namespace></Import>
+        <Import><Namespace>MicroFocus.NUnitTest.Util</Namespace></Import>
+        <Import><Namespace>MicroFocus.Test.Util.TestHelpers</Namespace></Import>
+        <Import><Namespace>MicroFocus.Test.Util.TestHelpers.Copybooks</Namespace></Import>
+        <Import><Namespace>MicroFocus.Test.Util.TestHelpers.Editor</Namespace></Import>
+        <Import><Namespace>MicroFocus.Test.Util.TestHelpers.Projects</Namespace></Import>
+        <Import><Namespace>MicroFocus.Test.Util.VSAutomation</Namespace></Import>
+        <Import><Namespace>NUnit.Framework</Namespace></Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>ClassName</ID>
+          <Default>Example</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp" Kind="type decl">
+        <![CDATA[[TestFixture]
+[Owner(Owners.TedJohn)]
+[Description("")]
+public class Test$ClassName$
+{
+    private const string PROJ_NAME_NATIVE = "Native.cblproj";
+    private const string PROJ_NAME_MANAGED = "Managed.cblproj";
+
+    private ITestHelper _testHelper = new TestHelper();
+
+    [TestFixtureSetUp]
+    public void TestFixtureSetUp()
+    {
+        string workPath = TestUtil.CommonTestSetUp(GetType());
+        string solutionPath = Path.Combine(workPath, typeof(Test$ClassName$).Name + ".sln");
+        _testHelper.OpenSolution(solutionPath);
+    }
+
+    [SetUp]
+    public void SetUp()
+    {
+    }
+
+    [TearDown]
+    public void TearDown()
+    {
+        _testHelper.UndoAllChanges()
+                   .CloseAllDocuments();
+    }
+
+    [TestFixtureTearDown]
+    public void TestFixtureTearDown()
+    {
+        Automation.TrappedStopDebuggingAndClose();
+    }
+
+    [Test]
+    public void ExampleTest()
+    {
+        _testHelper.SetProject(PROJ_NAME_MANAGED)
+                   .OpenDocument("Program1.cbl")
+                   .ExpandAllCopybooks();
+    }
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

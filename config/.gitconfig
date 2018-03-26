@@ -1,0 +1,6 @@
+[user]
+    name = Ted John
+    email = ted@brambles.org
+
+[alias]
+    st = status

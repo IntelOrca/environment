@@ -1,0 +1,7 @@
+{
+    "window.zoomLevel": 1,
+    "editor.renderWhitespace": "all",
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "vscode-icons"
+}
