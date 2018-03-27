@@ -30,7 +30,13 @@ function global:prompt
     return " "
 }
 
+# Command prompt overrides
+function dir { cmd /c dir $args }
+function mklink { cmd /c mklink $args }
+function which { cmd /c where $args }
+
 # Aliases
+Remove-Item alias:dir
 Set-Alias call Call-Batch
 Set-Alias grep Select-String
 
