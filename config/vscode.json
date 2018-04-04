@@ -11,7 +11,7 @@
     "files.autoSave": "off",
 
     // Editor
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "editor.renderWhitespace": "all",
     "editor.fontSize": 16,
     "editor.renderIndentGuides": false,
@@ -74,5 +74,6 @@
     "omnisharp.projectLoadTimeout": 300,
     "git.enableSmartCommit": true,
     "gitlens.keymap": "alternate",
-    "material-icon-theme.showUpdateMessage": false
+    "material-icon-theme.showUpdateMessage": false,
+    "diffEditor.ignoreTrimWhitespace": true
 }
