@@ -39,6 +39,7 @@ function which { cmd /c where $args }
 Remove-Item alias:dir
 Set-Alias call Call-Batch
 Set-Alias grep Select-String
+Set-Alias touch New-Item
 
 # Improve history up/down completion
 Set-PSReadLineOption -HistoryNoDuplicates:$true
