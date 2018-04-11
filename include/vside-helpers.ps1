@@ -15,3 +15,9 @@ function svnlog
     param([String]$path = ".")
     TortoiseProc.exe /command:log /path:$path
 }
+
+function svnbrowse
+{
+    param([String]$path = "http://nwb-svn/mf")
+    TortoiseProc.exe /command:repobrowser /path:$path
+}
