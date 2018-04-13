@@ -9,13 +9,19 @@ foreach ($module in $modulesToInclude)
     Import-Module $module.FullName
 }
 
-function vsdevcmd
-{
-    Call-Batch "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"
-}
+# Common to all profiles
+$env:PATH = "$home\bin;$env:PATH"
 
-# Micro Focus profile
-. $envbase\mf.ps1
+if ($env:COMPUTERNAME -eq "TED-PC")
+{
+    # Home profile
+    . $envbase\home.ps1
+}
+else
+{
+    # Micro Focus profile
+    . $envbase\mf.ps1
+}
 
 # Set prompt to show just current directory name
 function global:prompt

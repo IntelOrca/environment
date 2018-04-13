@@ -42,15 +42,21 @@ function Call-Batch
 
 param
 (
-	[Parameter(Mandatory=1)][string]$Command,
+	[string]$Script,
+	[string]$Command,
 	[switch]$Output = $true,
 	[switch]$Force
 )
 
+if ($Script)
+{
+	$Command = """$Script"""
+}
+
 $stream = if ($Output) { ($temp = [IO.Path]::GetTempFileName()) } else { 'nul' }
 $operator = if ($Force) {'&'} else {'&&'}
 
-foreach($_ in cmd /c " ""$Command"" > `"$stream`" 2>&1 $operator SET") {
+foreach($_ in cmd /c " $Command > `"$stream`" 2>&1 $operator SET") {
 	if ($_ -match '^([^=]+)=(.*)') {
 		[System.Environment]::SetEnvironmentVariable($matches[1], $matches[2])
 	}
