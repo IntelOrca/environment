@@ -33,6 +33,11 @@ function global:prompt
     }
     Write-Host -NoNewline "PS "
     Write-Host -NoNewline -ForegroundColor DarkCyan $cwd
+    if (Get-Command Write-VcsStatus -ErrorAction SilentlyContinue)
+    {
+        $GitPromptSettings.EnableWindowTitle = $null
+        Write-VcsStatus
+    }
     return " "
 }
 
