@@ -10,5 +10,6 @@ $env:MFSNK="$devbase\svn\vside\misc\win\snkeys\MicroFocus.snk"
 
 $env:PATH = "$env:NUNIT_HOME\bin\net-2.0;$env:PATH"
 $env:PATH = "$devbase\apps\ilspy;$env:PATH"
+$env:PATH = "$devbase\apps\jd;$env:PATH"
 $env:PATH = "$devbase\apps\nuget;$env:PATH"
 $env:PATH = "$devbase\apps\sysinternals;$env:PATH"
