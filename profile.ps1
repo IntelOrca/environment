@@ -10,6 +10,7 @@ foreach ($module in $modulesToInclude)
 }
 
 # Common to all profiles
+$env:PATH = "C:\Program Files\git\usr\bin;$env:PATH"
 $env:PATH = "$home\bin;$env:PATH"
 
 if ($env:COMPUTERNAME -eq "TED-PC")
