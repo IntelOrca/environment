@@ -13,7 +13,7 @@ foreach ($module in $modulesToInclude)
 $env:PATH = "C:\Program Files\git\usr\bin;$env:PATH"
 $env:PATH = "$home\bin;$env:PATH"
 
-if ($env:COMPUTERNAME -eq "TED-PC")
+if ($env:COMPUTERNAME -in ("TED-PC", "GRAHAM-LAPTOP"))
 {
     # Home profile
     . $envbase\home.ps1
