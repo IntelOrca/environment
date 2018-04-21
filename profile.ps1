@@ -12,6 +12,10 @@ foreach ($module in $modulesToInclude)
 # Common to all profiles
 $env:PATH = "C:\Program Files\git\usr\bin;$env:PATH"
 $env:PATH = "$home\bin;$env:PATH"
+foreach ($binDirectory in (Get-ChildItem -Directory "$home\bin"))
+{
+    $env:PATH = $binDirectory.FullName + ";$env:PATH"
+}
 
 if ($env:COMPUTERNAME -in ("TED-PC", "GRAHAM-LAPTOP"))
 {
