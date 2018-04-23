@@ -12,7 +12,7 @@ foreach ($module in $modulesToInclude)
 # Common to all profiles
 $env:PATH = "C:\Program Files\git\usr\bin;$env:PATH"
 $env:PATH = "$home\bin;$env:PATH"
-foreach ($binDirectory in (Get-ChildItem -Directory "$home\bin"))
+foreach ($binDirectory in (Get-ChildItem -Directory "$home\bin" -ErrorAction SilentlyContinue))
 {
     $env:PATH = $binDirectory.FullName + ";$env:PATH"
 }
