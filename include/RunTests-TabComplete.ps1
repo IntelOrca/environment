@@ -1,15 +1,27 @@
 function TabExpansion($line, $lastWord)
 {
     $lastBlock = [regex]::Split($line, '[|;]')[-1].TrimStart()
-    if ($lastBlock.StartsWith(".\runtest.bat ")) {
-        RunTestTabExpansion $lastBlock $lastWord
+    if ($lastBlock.StartsWith(".\runtest.bat ", [StringComparison]::OrdinalIgnoreCase))
+    {
+        RunTestTabExpansion $lastBlock $lastWord $false
+    }
+    elseif ($lastBlock.StartsWith(".\runtestRepeat.bat ", [StringComparison]::OrdinalIgnoreCase))
+    {
+        RunTestTabExpansion $lastBlock $lastWord $true
     }
 }
 
-function RunTestTabExpansion($line, $currentWord)
+function RunTestTabExpansion($line, $currentWord, $isRepeat)
 {
     $parts = $line.Split((' '), [System.StringSplitOptions]::RemoveEmptyEntries)
-    $path = $parts[1]
+    if ($isRepeat)
+    {
+        $path = $parts[2]
+    }
+    else
+    {
+        $path = $parts[1]
+    }
     $lastWord = $parts[-1].ToLower()
 
     if ($currentWord -ne "")
