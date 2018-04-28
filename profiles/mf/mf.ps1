@@ -1,3 +1,6 @@
+Get-ChildItem "$Script:PSScriptRoot\include" -Filter *.ps1 | Select-Object -ExpandProperty FullName | Import-Module
+
+$env:DEVBASE = "G:"
 $devbase = $env:DEVBASE
 $env:ANT_HOME = "$devbase\apps\ant"
 $env:ECLIPSE_HOME = "$devbase\apps\eclipse"

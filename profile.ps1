@@ -1,13 +1,7 @@
 $envbase = $Script:PSScriptRoot
-$env:DEVBASE = "G:"
 
 # Import modules
-$moduleIncludeDirectory = "$envbase\include"
-$modulesToInclude = Get-ChildItem $moduleIncludeDirectory -Filter *.ps1
-foreach ($module in $modulesToInclude)
-{
-    Import-Module $module.FullName
-}
+Get-ChildItem "$envbase\include" -Filter *.ps1 | Select-Object -ExpandProperty FullName | Import-Module
 
 # Common to all profiles
 $env:PATH = "C:\Program Files\git\usr\bin;$env:PATH"
@@ -17,15 +11,15 @@ foreach ($binDirectory in (Get-ChildItem -Directory "$home\bin" -ErrorAction Sil
     $env:PATH = $binDirectory.FullName + ";$env:PATH"
 }
 
-if ($env:COMPUTERNAME -in ("TED-PC", "GRAHAM-LAPTOP"))
+$defaultProfileName = "$envbase\profiles\$env:COMPUTERNAME\$env:COMPUTERNAME.ps1"
+if (Test-Path -PathType Leaf $defaultProfileName)
 {
-    # Home profile
-    . $envbase\home.ps1
+    . $defaultProfileName
 }
 else
 {
     # Micro Focus profile
-    . $envbase\mf.ps1
+    . $envbase\profiles\mf\mf.ps1
 }
 
 # Set prompt to show just current directory name
