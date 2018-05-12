@@ -17,6 +17,7 @@
     "editor.renderIndentGuides": false,
     "terminal.integrated.fontSize": 15,
     "editor.codeLens": false,
+    "editor.mouseWheelZoom": true,
     "diffEditor.renderSideBySide": false,
 
     // Language configuration
