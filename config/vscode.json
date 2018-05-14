@@ -9,6 +9,7 @@
     "window.menuBarVisibility": "toggle",
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "off",
+    "window.restoreWindows": "none",
 
     // Editor
     "window.zoomLevel": 0,
@@ -16,7 +17,6 @@
     "editor.fontSize": 16,
     "editor.renderIndentGuides": false,
     "terminal.integrated.fontSize": 15,
-    "editor.codeLens": false,
     "editor.mouseWheelZoom": true,
     "diffEditor.renderSideBySide": false,
 
