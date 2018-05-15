@@ -16,3 +16,12 @@ $env:PATH = "$devbase\apps\ilspy;$env:PATH"
 $env:PATH = "$devbase\apps\jd;$env:PATH"
 $env:PATH = "$devbase\apps\nuget;$env:PATH"
 $env:PATH = "$devbase\apps\sysinternals;$env:PATH"
+
+if (Test-Path -PathType Container "C:\Users\Public\Documents\Micro Focus\Enterprise Developer")
+{
+    $samples = "C:\Users\Public\Documents\Micro Focus\Enterprise Developer\Samples"
+}
+elseif (Test-Path -PathType Container "C:\Users\Public\Documents\Micro Focus\Visual COBOL")
+{
+    $samples = "C:\Users\Public\Documents\Micro Focus\Visual COBOL\Samples"
+}
