@@ -1,23 +1,25 @@
 {
     // Theming
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "One Dark Pro",
     "material-icon-theme.folders.color": "#90a4ae",
 
     // Shell
-    "extensions.ignoreRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     "window.menuBarVisibility": "toggle",
+    "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "off",
     "window.restoreWindows": "none",
 
     // Editor
     "window.zoomLevel": 0,
-    "editor.renderWhitespace": "all",
+    "terminal.integrated.fontSize": 15,
     "editor.fontSize": 16,
     "editor.renderIndentGuides": false,
-    "terminal.integrated.fontSize": 15,
+    "editor.renderWhitespace": "all",
     "editor.mouseWheelZoom": true,
+    "diffEditor.ignoreTrimWhitespace": true,
     "diffEditor.renderSideBySide": false,
 
     // Language configuration
@@ -39,30 +41,11 @@
         "bin": "other",
         "cpy": "include"
     },
-    "vsicons.associations.folders": [
-        {
-            "icon": "include",
-            "extensions": ["cpy", "cpylib"],
-            "format": "svg"
-        }
-    ],
-    "vsicons.associations.files": [
-        {
-            "icon": "binary",
-            "extensions": [".int", ".gnt"],
-            "format": "svg"
-        },
-        {
-            "icon": "c2",
-            "extensions": [".cbl", ".cob", ".cpy"],
-            "format": "svg"
-        },
-        {
-            "icon": "plsql",
-            "extensions": [".idy"],
-            "format": "svg"
-        }
-    ],
+    "material-icon-theme.files.associations": {
+        "*.cbl": "c",
+        "*.cpy": "c",
+        "*.cob": "c"
+    },
 
     // Extensions
     "cSpell.language": "en-GB",
@@ -76,5 +59,5 @@
     "git.enableSmartCommit": true,
     "gitlens.keymap": "alternate",
     "material-icon-theme.showUpdateMessage": false,
-    "diffEditor.ignoreTrimWhitespace": true
+    "powershell.startAutomatically": false
 }
