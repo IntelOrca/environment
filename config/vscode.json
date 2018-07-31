@@ -6,7 +6,7 @@
 
     // Shell
     "extensions.ignoreRecommendations": true,
-    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "custom",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "off",
@@ -28,6 +28,10 @@
         "editor.fontLigatures": true
     },
     "[javascriptreact]": {
+        "editor.fontFamily": "Fira Code",
+        "editor.fontLigatures": true
+    },
+    "[fsharp]": {
         "editor.fontFamily": "Fira Code",
         "editor.fontLigatures": true
     },
@@ -59,5 +63,10 @@
     "git.enableSmartCommit": true,
     "gitlens.keymap": "alternate",
     "material-icon-theme.showUpdateMessage": false,
-    "powershell.startAutomatically": false
+    "powershell.startAutomatically": false,
+
+    "[COBOL]": {
+        "editor.rulers": [6, 7, 11, 72]
+    },
+    "coboleditor.cblformatPath": "G:/svn/commonide/formatting/bin.net/cblformat.exe"
 }
