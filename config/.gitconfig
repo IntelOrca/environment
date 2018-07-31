@@ -6,3 +6,6 @@
     st = status
     co = checkout
     fix = commit --amend --no-edit
+
+[core]
+    editor = 'code' -w
