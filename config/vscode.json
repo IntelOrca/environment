@@ -52,6 +52,18 @@
     },
 
     // Extensions
+    "editor.tokenColorCustomizations": {
+        "[One Dark Pro]": {
+            "textMateRules": [
+                {
+                    "scope": "keyword.operator.cobol",
+                    "settings": {
+                        "foreground": "#56b6c2"
+                    }
+                }
+            ],
+        }
+    },
     "cSpell.language": "en-GB",
     "cSpell.enabledLanguageIds": [
         "latex",
