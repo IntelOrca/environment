@@ -52,6 +52,7 @@ Set-Alias grep Select-String
 Set-Alias touch New-Item
 
 # Improve history up/down completion
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd:$true
 Set-PSReadLineOption -HistoryNoDuplicates:$true
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
