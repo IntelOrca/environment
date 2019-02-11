@@ -15,6 +15,7 @@
     // Editor
     "window.zoomLevel": 0,
     "terminal.integrated.fontSize": 15,
+    "terminal.integrated.windowsEnableConpty": true,
     "editor.fontSize": 16,
     "editor.renderIndentGuides": false,
     "editor.renderWhitespace": "all",
