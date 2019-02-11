@@ -4,7 +4,7 @@
     <Header>
       <Title>VSIDE Integration Test Fixture</Title>
       <Author>Ted John</Author>
-      <Description>Says Hello to the world.</Description>
+      <Description>Template for a new VSIDE integration test.</Description>
       <Shortcut>integrationtest</Shortcut>
     </Header>
     <Snippet>
@@ -39,7 +39,7 @@ public class Test$ClassName$
     public void TestFixtureSetUp()
     {
         string workPath = TestUtil.CommonTestSetUp(GetType());
-        string solutionPath = Path.Combine(workPath, typeof(Test$ClassName$).Name + ".sln");
+        string solutionPath = Path.Combine(workPath, $$"{nameof(Test$ClassName$)}.sln");
         _testHelper.OpenSolution(solutionPath);
     }
 
