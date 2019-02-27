@@ -7,15 +7,19 @@ function Setup-VSPrompt
     )
 
     # Find VS
-    $skus = @("Enterprise", "Professional", "Community")
-    $basePath = "C:\Program Files (x86)\Microsoft Visual Studio\2017"
-    foreach ($sku in $skus)
+    $years = @("2019", "2017")
+    $skus = @("Enterprise", "Professional", "Community", "Preview")
+    $basePath = "C:\Program Files (x86)\Microsoft Visual Studio"
+    foreach ($year in $years)
     {
-        $potentialPath = "$basePath\$sku"
-        if (Test-Path $potentialPath)
+        foreach ($sku in $skus)
         {
-            $foundPath = $potentialPath
-            break
+            $potentialPath = "$basePath\$year\$sku"
+            if (Test-Path $potentialPath)
+            {
+                $foundPath = $potentialPath
+                break
+            }
         }
     }
 
