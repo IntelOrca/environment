@@ -8,4 +8,5 @@
     fix = commit --amend --no-edit
 
 [core]
+    autocrlf = input
     editor = 'code' -w
