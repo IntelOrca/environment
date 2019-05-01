@@ -1,0 +1,4 @@
+rofi.font:        sans-serif 80
+rofi.theme:       solarized_alternate
+rofi.lines:       8
+rofi.show-icons:  true
