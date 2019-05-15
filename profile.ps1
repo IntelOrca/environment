@@ -50,6 +50,8 @@ Remove-Item alias:dir
 Set-Alias call Call-Batch
 Set-Alias grep Select-String
 Set-Alias touch New-Item
+Set-Alias l Get-ChildItem
+Set-Alias .. cd..
 
 # Improve history up/down completion
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd:$true
@@ -61,3 +63,5 @@ Set-PSReadlineKeyHandler -Key CTRL+U -Function DeleteLineToFirstChar
 
 # Use newer SSL protocol (some sites prohibit the default one)
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+Set-Title "PowerShell"
