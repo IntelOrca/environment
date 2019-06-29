@@ -25,19 +25,26 @@ else
 # Set prompt to show just current directory name
 function global:prompt
 {
-    $cwd = [System.IO.Path]::GetFileName((Get-Location))
+    $origLastExitCode = $LASTEXITCODE
+    $cwd = [System.IO.Path]::GetFileName($ExecutionContext.SessionState.Path.CurrentLocation)
     if ($cwd -eq "")
     {
         $cwd = "\"
     }
-    Write-Host -NoNewline "PS "
-    Write-Host -NoNewline -ForegroundColor DarkCyan $cwd
     if (Get-Command Write-VcsStatus -ErrorAction SilentlyContinue)
     {
-        $GitPromptSettings.EnableWindowTitle = $null
-        Write-VcsStatus
+        $prompt += Write-Prompt "PS "
+        $prompt += Write-Prompt "$($cwd)" -ForegroundColor DarkCyan
+        $prompt += Write-VcsStatus
     }
-    return " "
+    else
+    {
+        Write-Host -NoNewline "PS "
+        Write-Host -NoNewline -ForegroundColor DarkCyan $cwd
+    }
+    $prompt += " "
+    $LASTEXITCODE = $origLastExitCode
+    return $prompt
 }
 
 # Command prompt overrides
