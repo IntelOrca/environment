@@ -2,7 +2,7 @@
     "globals" : 
     {
         "alwaysShowTabs" : true,
-        "defaultProfile" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "defaultProfile" : "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
         "initialCols" : 120,
         "initialRows" : 30,
         "keybindings" : 
@@ -203,6 +203,24 @@
     },
     "profiles" : 
     [
+        {
+            "acrylicOpacity" : 0.75,
+            "closeOnExit" : true,
+            "colorScheme" : "One Half Dark",
+            "commandline" : "pwsh-preview.cmd -nologo",
+            "cursorColor" : "#FFFFFF",
+            "cursorShape" : "filledBox",
+            "fontFace" : "Consolas",
+            "fontSize" : 14,
+            "guid" : "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+            "historySize" : 9001,
+            "icon" : "ms-appx:///ProfileIcons/{574e775e-4f2a-5b96-ac1e-a2962a402336}.png",
+            "name" : "PowerShell Core",
+            "padding" : "0, 0, 0, 0",
+            "snapOnInput" : true,
+            "startingDirectory" : "%USERPROFILE%",
+            "useAcrylic" : false
+        },
         {
             "acrylicOpacity" : 0.5,
             "closeOnExit" : true,
