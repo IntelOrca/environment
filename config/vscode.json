@@ -34,7 +34,9 @@
     },
     "[fsharp]": {
         "editor.fontFamily": "Fira Code",
-        "editor.fontLigatures": true
+        "editor.fontLigatures": true,
+        "editor.renderIndentGuides": true,
+        "editor.renderWhitespace": "none"
     },
     "files.associations": {
         "*.cblproj": "xml",
