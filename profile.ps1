@@ -5,6 +5,7 @@ Get-ChildItem "$envbase\include" -Filter *.ps1 | Select-Object -ExpandProperty F
 
 # Common to all profiles
 $env:PATH = "$env:PATH;C:\Program Files\git\usr\bin"
+$env:PATH = "$env:PATH;C:\Program Files\7-Zip"
 $env:PATH = "$home\bin;$env:PATH"
 foreach ($binDirectory in (Get-ChildItem -Directory "$home\bin" -ErrorAction SilentlyContinue))
 {
@@ -70,5 +71,8 @@ Set-PSReadlineKeyHandler -Key CTRL+U -Function DeleteLineToFirstChar
 
 # Use newer SSL protocol (some sites prohibit the default one)
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# Tell less we can display UTF-8
+$env:LESSCHARSET = "utf-8"
 
 Set-Title "PowerShell"
