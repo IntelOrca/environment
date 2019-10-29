@@ -1,0 +1,12 @@
+[user]
+    name = Ted John
+    email = ted.john@microfocus.com
+
+[alias]
+    st = status
+    co = checkout
+    fix = commit --amend --no-edit
+
+[core]
+    autocrlf = input
+    editor = 'code' -w
