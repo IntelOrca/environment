@@ -258,6 +258,24 @@
             "snapOnInput" : true,
             "startingDirectory" : "%USERPROFILE%",
             "useAcrylic" : true
+        },
+        {
+            "name" : "VSIDE Development",
+            "commandline" : "pwsh-preview.cmd -nol -noe -c \"vsdevcmd; call setenv.bat; set-title 'VSIDE DEV'\"",
+            "startingDirectory" : "G:/svn/vside/vscore",
+            "acrylicOpacity" : 0.75,
+            "closeOnExit" : true,
+            "colorScheme" : "One Half Dark",
+            "cursorColor" : "#FFFFFF",
+            "cursorShape" : "filledBox",
+            "fontFace" : "Fira Code",
+            "fontSize" : 14,
+            "guid" : "{574e775e-4f2a-5b96-ac1e-a2962a402338}",
+            "historySize" : 9001,
+            "icon" : "ms-appx:///ProfileIcons/{574e775e-4f2a-5b96-ac1e-a2962a402336}.png",
+            "padding" : "0, 0, 0, 0",
+            "snapOnInput" : true,
+            "useAcrylic" : false
         }
     ],
     "schemes" : 
