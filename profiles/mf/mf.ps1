@@ -17,6 +17,7 @@ $env:PATH = "$devbase\apps\ilspy;$env:PATH"
 $env:PATH = "$devbase\apps\jd;$env:PATH"
 $env:PATH = "$devbase\apps\nuget;$env:PATH"
 $env:PATH = "$devbase\apps\sysinternals;$env:PATH"
+$env:PATH = "$devbase\apps\tagit;$env:PATH"
 
 if (Test-Path -PathType Container "C:\Users\Public\Documents\Micro Focus\Enterprise Developer")
 {
