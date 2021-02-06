@@ -76,3 +76,7 @@ Set-PSReadlineKeyHandler -Key CTRL+U -Function DeleteLineToFirstChar
 $env:LESSCHARSET = "utf-8"
 
 Set-Title "PowerShell"
+
+Set-Theme Agnoster
+$ThemeSettings.Colors.PromptForegroundColor = 'Black'
+$DefaultUser = 'Ted'
