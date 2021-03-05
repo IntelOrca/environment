@@ -1,7 +1,6 @@
 function exp { devenv /nosplash /rootsuffix exp /command "Tools.COBDIRExpSetEnv" $args }
 function buildvsix { Light-Build .\src\MicroFocus.VSIX.ProductPackage\MicroFocus.VSIX.ProductPackage.csproj }
 function testenv { call "$env:MFSOLARROOT\cobdir\Debug\x86\CreateTestEnv.bat" }
-function nunitscan { & $env:DEVBASE\apps\nunitscan\nunitscan\bin\Release\nunitscan.exe $args }
 function cleartestresults
 {
     @("test work","results") | ForEach-Object {

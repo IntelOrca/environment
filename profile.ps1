@@ -59,6 +59,7 @@ Set-Alias call Call-Batch
 Set-Alias grep Select-String
 Set-Alias touch New-Item
 Set-Alias l Get-ChildItem
+Set-Alias ll Get-ChildItem
 Set-Alias .. cd..
 
 # Improve history up/down completion

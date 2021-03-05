@@ -1,10 +1,13 @@
 Get-ChildItem "$Script:PSScriptRoot\include" -Filter *.ps1 | Select-Object -ExpandProperty FullName | Import-Module
 
-$env:DEVBASE = "G:"
+if (-not $env:DEVBASE)
+{
+    $env:DEVBASE = "M:"
+}
 $devbase = $env:DEVBASE
 $env:ANT_HOME = "$devbase\apps\ant"
 $env:ECLIPSE_HOME = "$devbase\apps\eclipse"
-$env:JAVA_HOME = "$devbase\apps\java\jdk8u212-b03"
+$env:JAVA_HOME = "$devbase\apps\java\jdk8u272-b10"
 $env:NUNIT_HOME = "$devbase\apps\nunit"
 
 $env:SDKDIR = "$devbase\sdk"
