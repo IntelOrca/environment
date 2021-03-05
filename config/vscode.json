@@ -14,6 +14,7 @@
 
     // Editor
     "window.zoomLevel": 0,
+    "terminal.integrated.fontFamily": "Cascadia Code PL",
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.shell.windows": "pwsh-preview.cmd",
     "terminal.integrated.shellArgs.windows": ["-nologo"],
