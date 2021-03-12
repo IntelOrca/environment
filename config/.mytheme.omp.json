@@ -22,7 +22,9 @@
                     "background_templates": null,
                     "leading_diamond": "",
                     "trailing_diamond": "",
-                    "properties": null
+                    "properties": {
+                        "root_icon": "⚡"
+                    }
                 },
                 {
                     "type": "session",
