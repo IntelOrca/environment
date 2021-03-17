@@ -8,7 +8,7 @@ function Setup-VSPrompt
 
     # Find VS
     $years = @("2019", "2017")
-    $skus = @("Enterprise", "Professional", "Community", "Preview")
+    $skus = @("Enterprise", "Professional", "Community", "Preview", "BuildTools")
     $basePath = "C:\Program Files (x86)\Microsoft Visual Studio"
     foreach ($year in $years)
     {

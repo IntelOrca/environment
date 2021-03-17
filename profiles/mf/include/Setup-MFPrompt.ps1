@@ -7,15 +7,18 @@ function Setup-MFPrompt
     )
 
     # Find MF
-    $skus = @("Enterprise Developer", "Visual COBOL")
-    $basePath = "C:\Program Files (x86)\Micro Focus"
-    foreach ($sku in $skus)
+    $skus = @("Enterprise Developer", "Visual COBOL", "Visual COBOL Build Tools")
+    $basePaths = @("C:\Program Files\Micro Focus", "C:\Program Files (x86)\Micro Focus")
+    foreach ($basePath in $basePaths)
     {
-        $potentialPath = "$basePath\$sku"
-        if (Test-Path $potentialPath)
+        foreach ($sku in $skus)
         {
-            $foundPath = $potentialPath
-            break
+            $potentialPath = "$basePath\$sku"
+            if (Test-Path $potentialPath)
+            {
+                $foundPath = $potentialPath
+                break
+            }
         }
     }
 
