@@ -72,6 +72,7 @@
                     "leading_diamond": "",
                     "trailing_diamond": "",
                     "properties": {
+                        "tag_icon": "🔖 ",
                         "local_working_icon": " ✏️",
                         "local_staged_icon": " ⚙️"
                     }
