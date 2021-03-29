@@ -12,7 +12,7 @@ $env:NUNIT_HOME = "$devbase\apps\nunit"
 
 $env:SDKDIR = "$devbase\sdk"
 $env:MFSOLARROOT = "$devbase\solar"
-$env:MFSNK="$devbase\svn\vside\misc\win\snkeys\MicroFocus.snk"
+$env:MFSNK="$devbase\git\vside\misc\win\snkeys\MicroFocus.snk"
 
 $env:PATH = "$env:ANT_HOME\bin\;$env:PATH"
 $env:PATH = "$env:NUNIT_HOME\bin\net-2.0;$env:PATH"
