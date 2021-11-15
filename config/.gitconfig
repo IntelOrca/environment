@@ -12,4 +12,7 @@
     editor = 'code' -w
 
 [pull]
-	rebase = true
+    rebase = true
+
+[checkout]
+    defaultRemote = origin
