@@ -11,6 +11,7 @@
     "explorer.confirmDragAndDrop": false,
     "files.autoSave": "off",
     "window.restoreWindows": "none",
+    "security.workspace.trust.enabled": false,
 
     // Editor
     "window.zoomLevel": 0,
