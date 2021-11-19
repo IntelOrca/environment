@@ -40,7 +40,7 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher.sh
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # change focus
@@ -197,10 +197,20 @@ client.focused_inactive $darkblue       $darkblue       $grey           $purple 
 client.urgent           $urgentred      $urgentred      $white          $purple         $yellowbrown
 
 # Background apps
-exec compton
+exec picom --experimental-backends --backend glx 
 
 # Assignments
-assign [class="openrct2"] 2
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+assign [class="discord"] 2
+assign [class="firefox"] 3
+assign [class="openrct2"] 4
+assign [class="openloco"] 4
+for_window [class="discord"] focus
+for_window [class="firefox"] focus
+for_window [class="openrct2"] focus
+for_window [class="openloco"] focus
 for_window [class="explorer.exe"] floating enable
 
 # for_window [class=".*"] border pixel 0
