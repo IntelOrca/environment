@@ -15,9 +15,9 @@
 
     // Editor
     "window.zoomLevel": 0,
-    "terminal.integrated.fontFamily": "Cascadia Code PL",
+    "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
     "terminal.integrated.fontSize": 15,
-    "terminal.integrated.shell.windows": "pwsh-preview.cmd",
+    "terminal.integrated.shell.windows": "pwsh",
     "terminal.integrated.shellArgs.windows": ["-nologo"],
     "terminal.integrated.windowsEnableConpty": true,
     "terminal.integrated.automationShell.windows": "cmd.exe",
@@ -26,7 +26,6 @@
     "editor.renderWhitespace": "all",
     "editor.mouseWheelZoom": true,
     "diffEditor.ignoreTrimWhitespace": true,
-    "diffEditor.renderSideBySide": false,
 
     // Language configuration
     "[javascript]": {
