@@ -15,32 +15,36 @@
 
     // Editor
     "window.zoomLevel": 0,
-    "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+    "terminal.integrated.fontFamily": "CaskaydiaCove NF",
     "terminal.integrated.fontSize": 15,
-    "terminal.integrated.shell.windows": "pwsh",
-    "terminal.integrated.shellArgs.windows": ["-nologo"],
-    "terminal.integrated.windowsEnableConpty": true,
-    "terminal.integrated.automationShell.windows": "cmd.exe",
+    "terminal.integrated.automationProfile.windows":{
+        "path": "cmd.exe"
+    },
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        }
+    },
+    "editor.fontFamily": "Cascadia Code",
     "editor.fontSize": 16,
-    "editor.renderIndentGuides": false,
+    "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
     "editor.mouseWheelZoom": true,
     "diffEditor.ignoreTrimWhitespace": true,
 
     // Language configuration
-    "[javascript]": {
-        "editor.fontFamily": "Fira Code",
-        "editor.fontLigatures": true
-    },
-    "[javascriptreact]": {
-        "editor.fontFamily": "Fira Code",
-        "editor.fontLigatures": true
-    },
     "[fsharp]": {
-        "editor.fontFamily": "Fira Code",
-        "editor.fontLigatures": true,
-        "editor.renderIndentGuides": true,
-        "editor.renderWhitespace": "none"
+        "editor.renderWhitespace": "none",
+        "editor.guides.indentation": true
     },
     "files.associations": {
         "*.cblproj": "xml",
@@ -62,37 +66,7 @@
     },
 
     // Extensions
-    "editor.tokenColorCustomizations": {
-        "[One Dark Pro]": {
-            "textMateRules": [
-                {
-                    "scope": "keyword.operator.cobol",
-                    "settings": {
-                        "foreground": "#56b6c2"
-                    }
-                }
-            ],
-        }
-    },
-    "cSpell.language": "en-GB",
-    "cSpell.enabledLanguageIds": [
-        "latex",
-        "markdown",
-        "restructuredtext",
-        "text"
-    ],
-    "omnisharp.projectLoadTimeout": 300,
-    "git.enableSmartCommit": true,
     "gitlens.keymap": "alternate",
     "material-icon-theme.showUpdateMessage": false,
-    "powershell.startAutomatically": false,
-
-    "coboleditor.cblformatPath": "C:/git/commonide/bin.net/cblformat.exe",
-    "microFocusCOBOL.dialect": "Micro Focus",
-    "microFocusCOBOL.sourceFormat": "variable",
-    "[COBOL]": {
-        "editor.renderIndentGuides": false,
-        "editor.rulers": [6, 7, 11, 72]
-    },
-    "coboleditor.cblformatPath": "G:/svn/commonide/formatting/bin.net/cblformat.exe"
+    "powershell.startAutomatically": false
 }
