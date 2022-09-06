@@ -21,10 +21,7 @@
                     "background": "#ffe9aa",
                     "background_templates": null,
                     "leading_diamond": "",
-                    "trailing_diamond": "",
-                    "properties": {
-                        "root_icon": "⚡"
-                    }
+                    "trailing_diamond": ""
                 },
                 {
                     "type": "session",
