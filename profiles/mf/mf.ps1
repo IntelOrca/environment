@@ -8,17 +8,18 @@ $devbase = $env:DEVBASE
 $env:ANT_HOME = "$devbase\apps\ant"
 $env:ECLIPSE_HOME = "$devbase\apps\eclipse"
 $env:JAVA_HOME = "$devbase\apps\java\jdk8u272-b10"
-$env:NUNIT_HOME = "$devbase\apps\nunit"
+# $env:NUNIT_HOME = "$devbase\apps\nunit"
 
 $env:SDKDIR = "$devbase\sdk"
 $env:MFSOLARROOT = "$devbase\solar"
 $env:MFSNK="$devbase\git\vside\misc\win\snkeys\MicroFocus.snk"
 
 $env:PATH = "$env:ANT_HOME\bin\;$env:PATH"
-$env:PATH = "$env:NUNIT_HOME\bin\net-2.0;$env:PATH"
+# $env:PATH = "$env:NUNIT_HOME\bin\net-2.0;$env:PATH"
 $env:PATH = "$devbase\apps\ilspy;$env:PATH"
 $env:PATH = "$devbase\apps\jd;$env:PATH"
 $env:PATH = "$devbase\apps\nuget;$env:PATH"
+$env:PATH = "$devbase\apps\nunitscan;$env:PATH"
 $env:PATH = "$devbase\apps\sysinternals;$env:PATH"
 $env:PATH = "$devbase\apps\tagit;$env:PATH"
 
