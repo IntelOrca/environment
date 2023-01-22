@@ -77,4 +77,4 @@ Set-PSReadlineKeyHandler -Key CTRL+U -Function DeleteLineToFirstChar
 $env:LESSCHARSET = "utf-8"
 
 Set-Title "PowerShell"
-Set-PoshPrompt -Theme C:\Users\Ted\env\config\.mytheme.omp.json
+oh-my-posh init pwsh --config "$HOME\env\config\.mytheme.omp.json" | Invoke-Expression

@@ -1,7 +1,7 @@
 {
     // Theming
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "One Dark Pro Darker",
     "material-icon-theme.folders.color": "#90a4ae",
 
     // Shell
