@@ -16,3 +16,6 @@
 
 [checkout]
     defaultRemote = origin
+
+[safe]
+    directory = *

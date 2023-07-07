@@ -78,3 +78,6 @@ $env:LESSCHARSET = "utf-8"
 
 Set-Title "PowerShell"
 oh-my-posh init pwsh --config "$HOME\env\config\.mytheme.omp.json" | Invoke-Expression
+
+[Console]::InputEncoding = New-Object System.Text.UTF8Encoding
+[Console]::OutputEncoding = [Console]::InputEncoding

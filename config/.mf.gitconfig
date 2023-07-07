@@ -10,3 +10,12 @@
 [core]
     autocrlf = input
     editor = 'code' -w
+
+[pull]
+    rebase = true
+
+[checkout]
+    defaultRemote = origin
+
+[safe]
+    directory = *
