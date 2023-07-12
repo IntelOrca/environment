@@ -1,59 +1,47 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
-  "final_space": true,
   "blocks": [
     {
-      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "type": "root",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#100e23",
           "background": "#ffe9aa",
-          "template": " \uf0e7 "
+          "foreground": "#100e23",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "type": "root"
         },
         {
-          "type": "path",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#100e23",
           "background": "#91ddff",
-          "template": " {{ .Path }} ",
-          "properties": {
-            "folder_icon": "📁",
-            "folder_separator_icon": " \ue0b1 ",
-            "home_icon": "🏠",
-            "style": "agnoster"
-          }
-        },
-        {
-          "type": "git",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#193549",
-          "background": "#95ffa4",
-          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \u270f\ufe0f{{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \u2699\ufe0f{{ .Staging.String }}{{ end }} "
-        },
-        {
-          "type": "python",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b0",
           "foreground": "#100e23",
-          "background": "#906cff",
-          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} "
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "folder_icon": "\ue5ff",
+            "folder_separator_icon": " \ue0b1 ",
+            "home_icon": "\uf015",
+            "style": "agnoster"
+          },
+          "style": "powerline",
+          "type": "path"
         },
         {
-          "type": "exit",
-          "style": "powerline",
+          "background": "#95ffa4",
+          "foreground": "#193549",
           "powerline_symbol": "\ue0b0",
-          "foreground": "#ffffff",
+          "style": "powerline",
+          "type": "git"
+        },
+        {
           "background": "#ff8080",
-          "template": " {{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf42e{{ end }} "
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "type": "exit"
         }
-      ]
+      ],
+      "type": "prompt"
     }
-  ]
+  ],
+  "final_space": true,
+  "version": 1
 }

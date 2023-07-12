@@ -15,7 +15,7 @@
 
     // Editor
     "window.zoomLevel": 0,
-    "terminal.integrated.fontFamily": "CaskaydiaCove NF",
+    "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.automationProfile.windows":{
         "path": "cmd.exe"

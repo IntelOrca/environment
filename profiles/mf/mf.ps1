@@ -8,7 +8,7 @@ $devbase = $env:DEVBASE
 $env:ANT_HOME = "$devbase\apps\ant"
 $env:ECLIPSE_HOME = "$devbase\apps\eclipse"
 # $env:JAVA_HOME = "$devbase\apps\java\jdk8u272-b10"
-$env:JAVA_HOME = "$devbase\apps\java\jdk-17.0.5+5"
+$env:JAVA_HOME = "$devbase\apps\java\jdk-17.0.7+7"
 $env:PATH = "$env:JAVA_HOME\bin;$env:PATH"
 # $env:NUNIT_HOME = "$devbase\apps\nunit"
 
@@ -25,7 +25,8 @@ $env:PATH = "$devbase\apps\nunitscan;$env:PATH"
 $env:PATH = "$devbase\apps\sysinternals;$env:PATH"
 $env:PATH = "$devbase\apps\tagit;$env:PATH"
 $env:PATH = "$devbase\apps\testclient;$env:PATH"
-$env:PATH = "$devbase\apps\mf;$env:PATH"
+$env:PATH = "$devbase\apps\maven\bin;$env:PATH"
+$env:PATH = "$devbase\apps\mf\bin;$env:PATH"
 
 if (Test-Path -PathType Container "C:\Users\Public\Documents\Micro Focus\Enterprise Developer")
 {

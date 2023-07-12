@@ -1,6 +1,6 @@
 [user]
     name = Ted John
-    email = ted@brambles.org
+    email = ted.john@microfocus.com
 
 [alias]
     st = status
@@ -8,8 +8,9 @@
     fix = commit --amend --no-edit
 
 [core]
-    autocrlf = input
+	autocrlf = true
     editor = 'code' -w
+	fsmonitor = true
 
 [pull]
     rebase = true
