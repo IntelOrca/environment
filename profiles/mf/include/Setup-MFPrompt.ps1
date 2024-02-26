@@ -32,7 +32,11 @@ function Setup-MFPrompt
     {
         $command += " $Architecture"
     }
+
+    $backup = $env:PSModulePath
+    $env:PSModulePath = $null
     Call-Batch -Command $command
+    $env:PSModulePath = $backup
 }
 
 Set-Alias mfdevcmd Setup-MFPrompt
